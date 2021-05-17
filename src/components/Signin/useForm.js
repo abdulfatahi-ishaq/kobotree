@@ -2,24 +2,16 @@ import { useState } from 'react';
 
 const useForm = validate => {
 	const [values, setValues] = useState({
-		fullname: '',
 		email: '',
 		password: '',
 	});
 
 	let errorsField = {
-		password: {
-			required: false,
-			containsLowerCase: false,
-			containsUpperCase: false,
-			containsSpecialCharacter: false,
-			requiredLength: false,
-			containsNumber: false,
-		},
-		emailValid: false,
-		fullNameValid: false,
-		passwordValid: false,
-		formValid: false,
+		password: '',
+        email: "",
+        emailValid: false,
+        passwordValid: false,
+        formValid: false,
 	};
 
 	const [errors, setErrors] = useState(errorsField);
